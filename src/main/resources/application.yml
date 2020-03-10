@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: yuanyang
+    password: Yy52101989
+    url: jdbc:mysql://mes.api.fuliaoyi.com:3306/fyy_saas_dev?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
