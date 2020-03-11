@@ -15,7 +15,6 @@ import java.util.List;
 @Slf4j
 public class OrderForm2OrderDtoConverter {
     public static OrderDto convert(OrderForm orderForm) {
-        Gson gson = new Gson();
         OrderDto orderDto = new OrderDto();
         orderDto.setBuyerName(orderForm.getName());
         orderDto.setBuyerPhone(orderForm.getPhone());
@@ -23,7 +22,7 @@ public class OrderForm2OrderDtoConverter {
         orderDto.setBuyerOpenid(orderForm.getOpenid());
 
         List<OrderDetail> orderDetailList = new ArrayList<>();
-
+        Gson gson = new Gson();
         try {
             gson.fromJson(orderForm.getItems(),
                     new TypeToken<List<OrderDetail>>(){}.getType());
