@@ -1,3 +1,12 @@
+## [1.4.11](https://github.com/jason-live/scloud-order/compare/v1.4.9...v1.4.11) (2020-03-11)
+
+
+### Features
+
+* :sparkles: 完成cntroller逻辑开发 ([1fe4b12](https://github.com/jason-live/scloud-order/commit/1fe4b12ce2795ad3117309f629f17343bc23bbc3))
+
+
+
 ## 1.4.9 (2020-03-10)
 
 
