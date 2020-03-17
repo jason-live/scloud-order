@@ -1,3 +1,14 @@
+## [1.5.8](https://github.com/jason-live/scloud-order/compare/v1.5.2...v1.5.8) (2020-03-17)
+
+
+### Features
+
+* :sparkles: 1.5.7 获取商品列表 ([98f1d11](https://github.com/jason-live/scloud-order/commit/98f1d110035a9243fa462db5014e574cb723405c))
+* :sparkles: 1.5.8 口库存 ([0806142](https://github.com/jason-live/scloud-order/commit/08061423f1fd3b4748921f067831adae908e1e95))
+* :sparkles: 1.5.8 整合接口打通下单流程 ([e294f5f](https://github.com/jason-live/scloud-order/commit/e294f5f1dee8167686c3532e7dc028de769decc4))
+
+
+
 ## [1.5.2](https://github.com/jason-live/scloud-order/compare/v1.4.11...v1.5.2) (2020-03-11)
 
 

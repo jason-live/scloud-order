@@ -24,8 +24,7 @@ public class OrderForm2OrderDtoConverter {
         List<OrderDetail> orderDetailList = new ArrayList<>();
         Gson gson = new Gson();
         try {
-            gson.fromJson(orderForm.getItems(),
-                    new TypeToken<List<OrderDetail>>(){}.getType());
+            orderDetailList = gson.fromJson(orderForm.getItems(), new TypeToken<List<OrderDetail>>(){}.getType());
         } catch (Exception e) {
             log.error("【json转换】错误，string={}", orderForm.getItems());
             throw new OrderException(ResultEnum.PARAMS_ERROR);
