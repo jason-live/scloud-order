@@ -1,5 +1,6 @@
 package com.scloud.order.client;
 
+import com.scloud.order.dto.CartDto;
 import com.scloud.order.entity.ProductInfo;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,4 +17,7 @@ public interface ProductClient {
 
     @PostMapping("/product/listForOrder")
     public List<ProductInfo> listForOrder(@RequestBody  List<String> productIdList);
+
+    @PostMapping("/product/decreaseStock")
+    public void decreaseStock(@RequestBody List<CartDto> cartDtoList);
 }
