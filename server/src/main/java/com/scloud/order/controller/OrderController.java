@@ -40,7 +40,7 @@ public class OrderController {
             throw new OrderException(ResultEnum.PARAMS_ERROR.getCode(), bindingResult.getFieldError().getDefaultMessage());
         }
         // orderForm => orderDto
-        log.error("【创建订单参数】购物车信息为空={}", orderForm);
+        log.info("【创建订单参数】{}", orderForm);
         OrderDto orderDto = OrderForm2OrderDtoConverter.convert(orderForm);
         if (CollectionUtils.isEmpty(orderDto.getOrderDetailList())) {
             log.error("【创建订单】购物车信息为空");
