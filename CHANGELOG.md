@@ -1,3 +1,13 @@
+## [1.7.3](https://github.com/jason-live/scloud-order/compare/v1.6.7...v1.7.3) (2020-03-30)
+
+
+### Features
+
+* :sparkles: RabbitMQ使用 ([89f1f86](https://github.com/jason-live/scloud-order/commit/89f1f867de9dcc94f93d68fea432c83581c2f84d))
+* :sparkles: 修改版本回到M3 ([789680f](https://github.com/jason-live/scloud-order/commit/789680faa30370688928ed9b859b681213799e3c))
+
+
+
 ## [1.6.7](https://github.com/jason-live/scloud-order/compare/v1.6.3...v1.6.7) (2020-03-30)
 
 
