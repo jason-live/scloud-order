@@ -1,3 +1,12 @@
+## [1.6.3](https://github.com/jason-live/scloud-order/compare/v1.5.9...v1.6.3) (2020-03-30)
+
+
+### Features
+
+* :sparkles: 新增euraka配置 ([856b6e4](https://github.com/jason-live/scloud-order/commit/856b6e4383238de349b1a84a913b6664d552be4c))
+
+
+
 ## [1.5.9](https://github.com/jason-live/scloud-order/compare/v1.0.0...v1.5.9) (2020-03-25)
 
 
