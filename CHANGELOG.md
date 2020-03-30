@@ -1,3 +1,12 @@
+## [1.6.7](https://github.com/jason-live/scloud-order/compare/v1.6.3...v1.6.7) (2020-03-30)
+
+
+### Features
+
+* :sparkles: 新增消息总线 bug ([90aaac8](https://github.com/jason-live/scloud-order/commit/90aaac803746a0c5cf03822148e30b0975952e15))
+
+
+
 ## [1.6.3](https://github.com/jason-live/scloud-order/compare/v1.5.9...v1.6.3) (2020-03-30)
 
 
