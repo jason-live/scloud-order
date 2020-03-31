@@ -12,5 +12,7 @@
 
     <artifactId>order-common</artifactId>
 
+    <dependencies>
+    </dependencies>
     
 </project>

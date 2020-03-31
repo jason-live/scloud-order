@@ -7,13 +7,13 @@
     <artifactId>order</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <packaging>pom</packaging>
-
     <modules>
         <module>common</module>
         <module>server</module>
         <module>client</module>
     </modules>
+
+    <packaging>pom</packaging>
 
     <name>order</name>
     <description>Demo project for Spring Boot</description>
