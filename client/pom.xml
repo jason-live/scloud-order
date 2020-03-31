@@ -10,5 +10,5 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>prder-client</artifactId>
+    <artifactId>order-client</artifactId>
 </project>
