@@ -1,3 +1,12 @@
+## [1.7.10](https://github.com/jason-live/scloud-order/compare/v1.7.3...v1.7.10) (2020-03-31)
+
+
+### Features
+
+* :sparkles: 订单服务接入异步消息 ([9a1a6a9](https://github.com/jason-live/scloud-order/commit/9a1a6a9e8098738a2bcc9cd28250a9584f5c36ff))
+
+
+
 ## [1.7.3](https://github.com/jason-live/scloud-order/compare/v1.6.7...v1.7.3) (2020-03-30)
 
 
