@@ -1,3 +1,21 @@
+## [1.10.3-next.1](https://github.com/jason-live/scloud-order/compare/v1.10.3...v1.10.3-next.1) (2020-04-08)
+
+
+### Features
+
+* :sparkles: 熔断超时时间 ([5a19786](https://github.com/jason-live/scloud-order/commit/5a19786ee31d5aa991ae0478edeb88aabeb38d47))
+
+
+
+## [1.10.3](https://github.com/jason-live/scloud-order/compare/v1.9.9...v1.10.3) (2020-04-08)
+
+
+### Features
+
+* :sparkles: 新增熔断测试 ([5d402a7](https://github.com/jason-live/scloud-order/commit/5d402a7739f25c0a866e88912defc5e391e448d7))
+
+
+
 ## [1.9.9](https://github.com/jason-live/scloud-order/compare/v1.7.10...v1.9.9) (2020-04-08)
 
 
