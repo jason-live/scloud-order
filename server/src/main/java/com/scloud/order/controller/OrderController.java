@@ -14,6 +14,7 @@ import org.springframework.util.CollectionUtils;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
@@ -44,11 +45,21 @@ public class OrderController {
         OrderDto orderDto = OrderForm2OrderDtoConverter.convert(orderForm);
         if (CollectionUtils.isEmpty(orderDto.getOrderDetailList())) {
             log.error("【创建订单】购物车信息为空");
-            throw new OrderException(ResultEnum.CAET_EMPTY);
+            throw new OrderException(ResultEnum.CART_EMPTY);
         }
         OrderDto result = orderService.create(orderDto);
         Map<String, String> map = new HashMap<>();
         map.put("orderId", result.getOrderId());
         return ResultVoUtil.success(map);
+    }
+
+    /**
+     * 完结订单
+     * @param orderId
+     * @return
+     */
+    @PostMapping("/finish")
+    public ResultVo<OrderDto> finish(@RequestParam("orderId") String orderId) {
+        return ResultVoUtil.success(orderService.finish(orderId));
     }
 }

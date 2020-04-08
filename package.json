@@ -1,6 +1,6 @@
 {
   "name": "scloud-order",
-  "version": "1.7.10",
+  "version": "1.9.9",
   "description": "",
   "main": "index.js",
   "scripts": {
