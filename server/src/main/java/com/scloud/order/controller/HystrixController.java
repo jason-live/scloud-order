@@ -23,7 +23,7 @@ public class HystrixController {
     }
 
     public String fallback() {
-        return "太拥挤了，请稍后再试";
+        return "太拥挤了，请稍后再试.";
     }
 
     public String defaultFallback() {
