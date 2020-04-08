@@ -1,3 +1,12 @@
+## [1.9.9](https://github.com/jason-live/scloud-order/compare/v1.7.10...v1.9.9) (2020-04-08)
+
+
+### Features
+
+* :sparkles: 新增完结订单功能 ([35572b5](https://github.com/jason-live/scloud-order/commit/35572b5df5e329cad6073db231d5163c6a09bb1a))
+
+
+
 ## [1.7.10](https://github.com/jason-live/scloud-order/compare/v1.7.3...v1.7.10) (2020-03-31)
 
 
