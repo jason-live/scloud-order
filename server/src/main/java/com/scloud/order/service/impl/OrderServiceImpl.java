@@ -5,6 +5,8 @@ import com.scloud.order.entity.OrderDetail;
 import com.scloud.order.entity.OrderMaster;
 import com.scloud.order.enums.OrderStatusEnum;
 import com.scloud.order.enums.PayStatusEnum;
+import com.scloud.order.enums.ResultEnum;
+import com.scloud.order.exception.OrderException;
 import com.scloud.order.repository.OrderDetailRepository;
 import com.scloud.order.repository.OrderMasterRepository;
 import com.scloud.order.service.OrderService;
@@ -16,10 +18,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -35,6 +40,7 @@ public class OrderServiceImpl implements OrderService {
     private ProductClient productClient;
 
     @Override
+    @Transactional
     public OrderDto create(OrderDto orderDto) {
         String orderId = KeyUtil.getUniqueKey();
         //Todo 查询商品信息（调用商品服务
@@ -73,6 +79,36 @@ public class OrderServiceImpl implements OrderService {
         orderMaster.setOrderStatus(OrderStatusEnum.NEW.getCode());
         orderMaster.setPayStatus(PayStatusEnum.WAIT.getCode());
         orderMasterRepository.save(orderMaster);
+        return orderDto;
+    }
+
+    @Override
+    @Transactional
+    public OrderDto finish(String orderId) {
+        // 查询订单
+        Optional<OrderMaster> optionalOrderMaster = orderMasterRepository.findById(orderId);
+        if (!optionalOrderMaster.isPresent()) {
+            throw new OrderException(ResultEnum.ORDER_NOT_EXIST);
+        }
+        // 判断订单状态
+        OrderMaster orderMaster = optionalOrderMaster.get();
+        if (orderMaster.getOrderStatus() != OrderStatusEnum.NEW.getCode()) {
+            throw new OrderException(ResultEnum.ORDER_STATUS_ERROR);
+        }
+        // 修改订单为完结
+        orderMaster.setOrderStatus(OrderStatusEnum.FINISH.getCode());
+        orderMasterRepository.save(orderMaster);
+
+        // 查询订单详情
+        List<OrderDetail> orderDetailList = orderDetailRepository.findByOrderId(orderId);
+        if (CollectionUtils.isEmpty((orderDetailList))) {
+            throw new OrderException(ResultEnum.ORDER_DETAIL_NOT_EXIST);
+        }
+
+        OrderDto orderDto = new OrderDto();
+        BeanUtils.copyProperties(orderMaster, orderDto);
+        orderDto.setOrderDetailList(orderDetailList);
+
         return orderDto;
     }
 }
