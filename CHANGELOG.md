@@ -1,3 +1,12 @@
+## [1.11.2](https://github.com/jason-live/scloud-order/compare/v1.10.8...v1.11.2) (2020-04-09)
+
+
+### Features
+
+* :sparkles: 链路跟踪 ([08a7aa2](https://github.com/jason-live/scloud-order/commit/08a7aa221c2fc0b3c03fed8febe65fae7ff174c2))
+
+
+
 ## [1.10.8](https://github.com/jason-live/scloud-order/compare/v1.10.3-next.1...v1.10.8) (2020-04-09)
 
 
