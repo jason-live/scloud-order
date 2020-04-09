@@ -1,3 +1,12 @@
+## [1.10.8](https://github.com/jason-live/scloud-order/compare/v1.10.3-next.1...v1.10.8) (2020-04-09)
+
+
+### Features
+
+* :sparkles: 熔断完结 ([9ac0d17](https://github.com/jason-live/scloud-order/commit/9ac0d1722a4c80330adca401e66012433b1b84c3))
+
+
+
 ## [1.10.3-next.1](https://github.com/jason-live/scloud-order/compare/v1.10.3...v1.10.3-next.1) (2020-04-08)
 
 
