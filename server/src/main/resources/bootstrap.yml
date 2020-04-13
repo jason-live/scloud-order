@@ -13,14 +13,18 @@ spring:
           group: order
           content-type: application/json
   zipkin:
-    base-url: http://127.0.0.1:9411/
+    base-url: http://zipkin:9411/
   sleuth:
     sampler:
       percentage: 1
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: http://eureka-master:8761/eureka/,http://eureka-assist:8762/eureka/
+  instance:
+    prefer-ip-address: true
+server:
+  port: 8083
 hystrix:
   commond:
     default:

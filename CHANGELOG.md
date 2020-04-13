@@ -1,3 +1,12 @@
+## [1.12.7](https://github.com/jason-live/scloud-order/compare/v1.11.2...v1.12.7) (2020-04-13)
+
+
+### Features
+
+* :sparkles: 新增容器部署 ([5085570](https://github.com/jason-live/scloud-order/commit/5085570d26acf7db623c479d40d9288589cc6c73))
+
+
+
 ## [1.11.2](https://github.com/jason-live/scloud-order/compare/v1.10.8...v1.11.2) (2020-04-09)
 
 
